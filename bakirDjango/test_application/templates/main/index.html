@@ -1,0 +1,10 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block title %}
+  mainPage
+{% endblock title %}
+{% block content %}
+  <img src="{% static 'main/imag/fon.jpg' %}" alt="sdsd" class="img" />
+  <audio src="{% static 'main/mp3/Alec.mp3' %}" controls class="audio">
+  </audio>
+{% endblock content %}

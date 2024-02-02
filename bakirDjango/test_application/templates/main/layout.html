@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="foo,bar" />
+    <meta name="description" content="foo" />
+    <title>
+      {% block title %}
+      {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}" />
+  </head>
+  <body>
+    <aside class="aside">
+      <img src="{% static 'main/imag/avatar.jpg' %}"
+           alt="avatar"
+           class="ImgAvatar" />
+      <h1>FRONTEND DEVELOPER</h1>
+      <section class="navigation">
+        <nav>
+          <ul>
+            <li>О себе</li>
+            <li>Мои работы</li>
+            <li>Портфолио</li>
+            <li>Контакты</li>
+          </ul>
+        </nav>
+      </section>
+    </aside>
+    <main class="main">
+      {% block content %}
+      {% endblock content %}
+    </main>
+  </body>
+</html>
